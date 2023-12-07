@@ -1,5 +1,6 @@
 import React from 'react'
 import prisma from "@/lib/prisma";
+import Quiz from "@/app/components/quiz/Quiz";
 
 export default async function Page({params}: { params: { id: string } }) {
     // verify id is a int
@@ -10,17 +11,22 @@ export default async function Page({params}: { params: { id: string } }) {
         {
             where: {
                 id: id
+            },
+            include: {
+                questions: {
+                    include: {
+                        answers: true
+                    }
+                }
             }
         }
     )
 
     if (!quiz) {
-        return {
-            notFound: true
-        }
+        return {notFound: true}
     }
 
     return (
-        <div>{quiz.title}</div>
+        <Quiz quiz={quiz}/>
     )
 }
