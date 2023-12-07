@@ -19,3 +19,24 @@ spec:
           ports:
             - containerPort: 3000
               name: http
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: nuit-info-2023-secrets
+                  key: DATABASE_URL
+            - name: KEYCLOAK_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: nuit-info-2023-secrets
+                  key: KEYCLOAK_CLIENT_ID
+            - name: KEYCLOAK_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: nuit-info-2023-secrets
+                  key: KEYCLOAK_CLIENT_SECRET
+            - name: KEYCLOAK_ISSUER
+              valueFrom:
+                secretKeyRef:
+                  name: nuit-info-2023-secrets
+                  key: KEYCLOAK_ISSUER
