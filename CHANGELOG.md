@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.12.0...v1.13.0) (2023-12-07)
+
+
+### Features
+
+* remove boilerplate, add basic api and homepage ([430281e](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/430281ecd963b061b093f3a2f23db8c6332bf4de))
+
 # [1.12.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.11.0...v1.12.0) (2023-12-07)
 
 
