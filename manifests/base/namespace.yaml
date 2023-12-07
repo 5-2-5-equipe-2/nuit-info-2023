@@ -1,0 +1,7 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nuit-info-2023
+  labels:
+    toolkit.fluxcd.io/tenant: sre-team
