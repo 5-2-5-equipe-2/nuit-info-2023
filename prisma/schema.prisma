@@ -16,15 +16,15 @@ model Account {
   type               String
   provider           String
   providerAccountId  String
-  refresh_token      String?  @db.Text
-  access_token       String?  @db.Text
+  refresh_token      String? @db.Text
+  access_token       String? @db.Text
   expires_at         Int?
   token_type         String?
   scope              String?
-  id_token           String?  @db.Text
+  id_token           String? @db.Text
   session_state      String?
   refresh_expires_in Int?
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user               User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
 }
@@ -45,10 +45,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  quiz          Quiz      @relation(fields: [quizId], references: [id])
-  quizId        Int
 }
-
 
 model VerificationToken {
   identifier String
@@ -59,26 +56,42 @@ model VerificationToken {
 }
 
 model Quiz {
-  id       Int      @id @default(autoincrement())
-  title   String
+  id          Int        @id @default(autoincrement())
+  title       String
   description String
-  questions Question[]
-  image String
-User        User[]
+  questions   Question[]
+  image       String
 }
 
 model Question {
-  id       Int      @id @default(autoincrement())
+  id      Int      @id @default(autoincrement())
   title   String
-  quiz Quiz @relation(fields: [quizId], references: [id])
-  quizId Int
+  quiz    Quiz     @relation(fields: [quizId], references: [id])
+  quizId  Int
   answers Answer[]
 }
 
 model Answer {
-  id       Int      @id @default(autoincrement())
-  title   String
-  isCorrect Boolean
-  question Question @relation(fields: [questionId], references: [id])
+  id         Int      @id @default(autoincrement())
+  title      String
+  isCorrect  Boolean
+  question   Question @relation(fields: [questionId], references: [id])
   questionId Int
+}
+
+model Device {
+  id     Int      @id @default(autoincrement())
+  type   String
+  name   String
+  Metric Metric[]
+}
+
+model Metric {
+  id          Int      @id @default(autoincrement())
+  device      Device   @relation(fields: [deviceId], references: [id])
+  deviceId    Int
+  createdAt   DateTime @default(now())
+  humidity    Float
+  temperature Float
+  day         Boolean
 }

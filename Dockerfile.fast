@@ -12,6 +12,7 @@ COPY public ./public
 # Install only production dependencies
 RUN npm install --only=production
 RUN npm prisma generate
+
 # Expose the port that Next.js runs on
 EXPOSE 3000
 
