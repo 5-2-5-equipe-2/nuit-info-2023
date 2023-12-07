@@ -9,4 +9,4 @@ resources:
   - ingress.yaml
 images:
   - name: ghcr.io/5-2-5-equipe-2/nuit-info-2023
-    newTag: 1.16.0
+    newTag: 1.18.0
