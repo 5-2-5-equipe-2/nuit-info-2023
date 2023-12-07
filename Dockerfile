@@ -29,6 +29,7 @@ COPY --from=build /app/public ./public
 
 # Install only production dependencies
 RUN npm install --only=production
+RUN npx prisma generate
 
 # Expose the port that Next.js runs on
 EXPOSE 3000
