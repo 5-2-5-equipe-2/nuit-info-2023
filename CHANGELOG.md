@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.8.0...v1.9.0) (2023-12-07)
+
+
+### Features
+
+* semantic pewpew ([72fc6de](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/72fc6de24535b3fbf15dd962a702a4054eb1859a))
+
 # [1.8.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.7.0...v1.8.0) (2023-12-07)
 
 
