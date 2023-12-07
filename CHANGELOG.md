@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.2.0...v1.3.0) (2023-12-7)
+
+
+### Features
+
+* semantic releaseasdkmqwieka ([02f0351](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/02f0351315ea38f82e8033851d4cd409325331ae))
+
 # [1.2.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.1.0...v1.2.0) (2023-12-7)
 
 
