@@ -50,3 +50,18 @@ jobs:
           platforms: linux/arm64,linux/amd64
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/nuit-info-2023:latest,ghcr.io/${{ github.repository_owner }}/nuit-info-2023:${{ github.sha }},"ghcr.io/${{ github.repository_owner }}/nuit-info-2023:${{ steps.semantic.outputs.new_release_version }}"
+
+      # update the kustomize image tag to the new version and push the changes to the repo
+
+      #images:
+      #  - newTag: 1.9.0 (can be found in manifests/kustomization.yaml)
+      - name: Update manifest
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: |
+          sed -i 's/\(newTag: \).*/\1'${{ steps.semantic.outputs.new_release_version }}'/' manifests/kustomization.yaml
+          git config --global user.email "semantic@release.com"
+          git config --global user.name "GitHub Action"
+          git add manifests/kustomization.yaml
+          git commit -m "Update kustomize image tag to ${{ steps.semantic.outputs.new_release_version }}"
+          git push          
+  
