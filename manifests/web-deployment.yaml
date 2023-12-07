@@ -13,7 +13,7 @@ spec:
   selector:
     matchLabels:
       io.kompose.service: web
-  strategy: {}
+  strategy: { }
   template:
     metadata:
       annotations:
@@ -31,6 +31,27 @@ spec:
             - containerPort: 3000
               hostPort: 3000
               protocol: TCP
-          resources: {}
+          resources: { }
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: nuit-info-2023-secrets
+                  key: DATABASE_URL
+            - name: KEYCLOAK_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: nuit-info-2023-secrets
+                  key: KEYCLOAK_CLIENT_ID
+            - name: KEYCLOAK_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: nuit-info-2023-secrets
+                  key: KEYCLOAK_CLIENT_SECRET
+            - name: KEYCLOAK_ISSUER
+              valueFrom:
+                secretKeyRef:
+                  name: nuit-info-2023-secrets
+                  key: KEYCLOAK_ISSUER
       restartPolicy: Always
-status: {}
+status: { }
