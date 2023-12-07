@@ -1,0 +1,5 @@
+services:
+  web:
+    image: ghcr.io/5-2-5-equipe-2/nuit-info-2023:1.9.0
+    ports:
+      - 3000:3000

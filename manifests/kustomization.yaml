@@ -1,5 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: nuit-info-2023
 resources:
   - namespace.yaml
   - postgres
+  - web-deployment.yaml
+  - web-service.yaml
+images:
+  - name: ghcr.io/5-2-5-equipe-2/nuit-info-2023
+    newTag: 1.9.0

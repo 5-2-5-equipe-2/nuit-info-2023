@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: main
+  namespace: nuit-info-2023
+spec:
+  selector:
+    matchLabels:
+      app: main
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: main
+    spec:
+      containers:
+        - name: main
+          image: ghcr.io/5-2-5-equipe-2/nuit-info-2023:1.9.0
+          ports:
+            - containerPort: 3000
+              name: http
