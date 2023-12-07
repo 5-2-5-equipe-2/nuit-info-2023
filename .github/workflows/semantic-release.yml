@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - master
-permissions: write-all
 jobs:
   publish:
+    permissions:
+      contents: write
+      packages: write
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,4 +23,6 @@ jobs:
       - name: Build app
         run: npm run build
       - name: Semantic release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
