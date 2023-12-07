@@ -1,3 +1,18 @@
+# [1.19.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.18.0...v1.19.0) (2023-12-07)
+
+
+### Features
+
+* add prisma generate ([f450c2a](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/f450c2a6705d0ca32409c0034db5d4491e5c5e8c))
+* Dockerfile ([4bd3dfd](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/4bd3dfd3c1f72b880cbe84df86b6e90d74650760))
+* Dockerfile ([2f92e50](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/2f92e506789a3711ab202fd0312a5bc6c5c5d36e))
+* Dockerfile ([5aaa898](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/5aaa898956d33e453e16462a6fee522ae0be98d8))
+* metric ([cafe6ec](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/cafe6ec24711ff870bb0462cc386f80dc0c1555c))
+* metric ([0e7e6f8](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/0e7e6f828a0793f14611273087b16baddd3f21f8))
+* metric ([acb326b](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/acb326beeb7946352ab45fecd4d0242765fc1280))
+* quizz ([9d21e82](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/9d21e8240d8ed2c5d5ac57f5828daf066eed5f92))
+* something ([4a2f368](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/4a2f36808973c4f787cb64bbfdefea258c87ea24))
+
 # [1.18.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.17.0...v1.18.0) (2023-12-07)
 
 
