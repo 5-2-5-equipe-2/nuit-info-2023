@@ -13,8 +13,8 @@ export default function NavBar() {
 
     let pages: Page[] = [
         {
-            name: 'Quizz',
-            url: '/quizz',
+            name: 'Quiz',
+            url: '/quiz/select',
             enabled: false
         },
         {
@@ -50,7 +50,7 @@ export default function NavBar() {
                 </label>
                 <ul tabIndex={0}
                     className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a>Logout</a></li>
+                    <li><Link href={"/api/auth/signout"}>Logout</Link></li>
                 </ul>
             </div>
         </div>
