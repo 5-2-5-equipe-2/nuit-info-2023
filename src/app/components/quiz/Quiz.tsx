@@ -27,7 +27,7 @@ export default function Quiz(props: any) {
                     </div>
 
                 </div>
-                <div className={"flex flex-col items-center mt-10"}>
+                <div className={"flex flex-col items-center my-10"}>
                     <div className="carousel w-3/4 bg-secondary-content card shadow-xl">
                         {quiz.questions.map((question: any, i: number) => {
                             return (
@@ -38,20 +38,12 @@ export default function Quiz(props: any) {
                                             {question.answers.map((answer: any, i: number) => {
                                                 return (
                                                     <button key={i}
-                                                            className={"btn m-5 text-xl  " + (answer.isCorrect ? "btn-success" : "btn-error")}>{answer.title}</button>
+                                                            className={"btn m-5  " + (answer.isCorrect ? "btn-success" : "btn-error")}>{answer.title}</button>
                                                 )
                                             })}
                                         </div>
                                     </div>
                                 </div>
-                            )
-                        })}
-                    </div>
-
-                    <div className="flex justify-center w-3/4 py-2 gap-2 mt-2">
-                        {quiz.questions.map((answer: any, i: number) => {
-                            return (
-                                <a key={i} href={"#item-" + i} className="btn btn-xs">{i}</a>
                             )
                         })}
                     </div>
@@ -68,7 +60,7 @@ export default function Quiz(props: any) {
                     <div className={"grid grid-cols-2"}>
                         {quiz.questions[currentQuestion].answers.map((answer: any, i: number) => {
                             return (
-                                <button key={i} className="btn m-5 btn-outline btn-primary text-xl" onClick={() => {
+                                <button key={i} className="btn m-5 btn-outline btn-primary" onClick={() => {
                                     if (answer.isCorrect) {
                                         // append 1 to correctAnswers
                                         setCorrectAnswers(correctAnswers + 1)
