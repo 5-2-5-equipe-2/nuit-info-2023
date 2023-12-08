@@ -36,7 +36,9 @@ const Map = (
 
                     <Marker position={[metric.lat, metric.lng]} key={metric.id}>
                         <Tooltip>
-                            {metric.temperature}°C, {metric.humidity}%
+                            Temperature: {metric.temperature} <br/>
+                            Humidity: {metric.humidity} <br/>
+                            Day: {metric.day ? "Yes" : "No"} <br/>
                         </Tooltip>
                     </Marker>
                 );
