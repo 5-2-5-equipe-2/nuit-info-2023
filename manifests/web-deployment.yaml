@@ -58,5 +58,15 @@ spec:
                 secretKeyRef:
                   name: nuit-info-2023-secrets
                   key: NEXTAUTH_URL
+            - name: SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: nuit-info-2023-secrets
+                  key: SECRET
+            - name: NEXTAUTH_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: nuit-info-2023-secrets
+                  key: NEXTAUTH_SECRET
       restartPolicy: Always
 status: { }
