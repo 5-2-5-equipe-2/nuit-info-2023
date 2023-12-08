@@ -5,7 +5,6 @@ export const dynamic = 'force-dynamic';
 export default async function Home() {
     const deviceCount = await prisma.device.count()
     const metricCount = await prisma.metric.count()
-    const userCount = await prisma.user.count()
     const quizCount = await prisma.quiz.count()
     const questionCount = await prisma.question.count()
 
@@ -44,7 +43,7 @@ export default async function Home() {
                                 </div>
                                 <div className="stat-title">Devices</div>
                                 <div className="stat-value">{deviceCount}</div>
-                                <div className="stat-desc">Shared between {userCount} users</div>
+                                <div className="stat-desc">Shared between users</div>
                             </div>
 
                             <div className="stat">
