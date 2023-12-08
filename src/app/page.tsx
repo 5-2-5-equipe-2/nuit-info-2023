@@ -1,4 +1,5 @@
 import prisma from "@/lib/prisma";
+import Link from "next/link";
 
 
 export const dynamic = 'force-dynamic';
@@ -19,7 +20,8 @@ export default async function Home() {
 
     return (
         <>
-            <div className="hero" style={{backgroundImage: "url(/nasa-vhSz50AaFAs-unsplash.jpg)",
+            <div className="hero" style={{
+                backgroundImage: "url(/nasa-vhSz50AaFAs-unsplash.jpg)",
                 height: "80vh",
             }}>
                 <div className="hero-overlay bg-opacity-60"></div>
@@ -27,8 +29,11 @@ export default async function Home() {
                     <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold">CrowdEnv</h1>
                         <p className="mb-5">Learn and contribute to better understand the world and the environment.</p>
-                        <button className="btn btn-primary m-5">Learn</button>
-                        <button className={"btn btn-info m-5"}>Contribute</button>
+                        <Link className="btn btn-primary m-5"
+                              href={
+                                  "/quiz/select"
+                              }>Learn</Link>
+                        <Link className={"btn btn-info m-5"} href={'/data'}>CrowdData</Link>
                     </div>
                     <div className={"flex flex-row mx-auto flex-wrap justify-center justify-items-center "}>
                         <div className="stats shadow m-5">
