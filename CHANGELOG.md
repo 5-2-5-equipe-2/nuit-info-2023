@@ -1,3 +1,18 @@
+# [1.22.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.21.0...v1.22.0) (2023-12-08)
+
+
+### Bug Fixes
+
+* missing dynamicalnksoikdmlq weaw ([f1f6b38](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/f1f6b381f0e95c8280a304c130b4023e4913bfc1))
+* missing dynamicalnksoikdmlq weaw ([115dc03](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/115dc03842304c75ca2d978ffa3f75d668cb9e7e))
+* missing dynamicalnksoikdmlq weaw ([0663f80](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/0663f805fa0b528e11842fb94f19d6c3b1d1243d))
+
+
+### Features
+
+* hero ([9c52107](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/9c521074147daf1303d587fc4ae5fa7b9948af73))
+* hero ([c008cba](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/c008cba6342c6b7c78ee4fec58929f87ecd51dba))
+
 # [1.21.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.20.0...v1.21.0) (2023-12-08)
 
 
