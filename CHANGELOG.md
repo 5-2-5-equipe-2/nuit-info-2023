@@ -1,3 +1,24 @@
+# [1.21.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.20.0...v1.21.0) (2023-12-08)
+
+
+### Bug Fixes
+
+* missing dynamicalnksoikdmlq we ([a014026](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/a014026c29c7c2155d680d88072ff5054ca05986))
+* missing dynamicalnksoikdmlq we ([32e3445](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/32e3445a8a4a655456f84c5b503bd10c93ce5f67))
+* missing dynamicalnksoikdmlq we ([4955872](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/495587209b86e21649bda0e08d1110497b76ef6d))
+* missing dynamicalnksoikdmlq we ([6a94325](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/6a94325dd258fc2c205733060ed0e4f31624ad5a))
+* missing dynamicalnksoikdmlq we ([56bc5e3](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/56bc5e35fdf92bab1ffc72aac7d236e312a27426))
+* missing dynamicalnksoikdmlq we ([0ad1abb](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/0ad1abb9ac33851db5ea302b08c90559d2a89e9e))
+* missing dynamicalnksoikdmlq we ([2745103](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/27451030bdc533042e1954b021f0d7699868ca48))
+* missing dynamicalnksoikdmlq we ([f7401af](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/f7401af0c90636afc37243f41130cd8e018bc9ce))
+* missing dynamicalnksoikdmlq we ([7b7d0cf](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/7b7d0cf43ffea45787cabc9e043b03e49642349d))
+
+
+### Features
+
+* hero ([1a6c99c](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/1a6c99c441cef10eaacc4cf10c85c0c6e6ea6263))
+* quizz ([fd90158](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/fd9015881c741863fc3d2a3e65afdebdf080f9e4))
+
 # [1.20.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.19.0...v1.20.0) (2023-12-08)
 
 
