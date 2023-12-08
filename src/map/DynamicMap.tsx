@@ -1,14 +1,15 @@
 "use client"
 import {useEffect} from 'react';
 import Leaflet from 'leaflet';
-import * as ReactLeaflet from 'react-leaflet';
+import {TileLayer, Popup, useMapEvents, useMap, Tooltip, MapContainer} from 'react-leaflet'
 import 'leaflet-defaulticon-compatibility';
 import 'leaflet/dist/leaflet.css';
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
 
 
-const {MapContainer} = ReactLeaflet;
 
 import {Metric} from '@prisma/client';
+import {Marker} from "react-leaflet";
 
 const Map = (
     {
@@ -22,22 +23,24 @@ const Map = (
         <MapContainer
             // important to set this to some height otherwise the map won't be visible
             style={{minHeight: "500px"}}
-            center={[51.505, -0.09]}
+            center={data[0] ? [data[0].lat, data[0].lng] : [0, 0]}
             zoom={13}
         >
-            <ReactLeaflet.TileLayer
+            <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {data.map((metric: Metric) => (
-                <ReactLeaflet.Marker position={[metric.lat, metric.lng]} key={metric.id}>
-                    <ReactLeaflet.Popup>
-                        <span>
-                            {metric.id} {metric.deviceId} {metric.temperature} {metric.humidity} {metric.day} {metric.lat} {metric.lng}
-                        </span>
-                    </ReactLeaflet.Popup>
-                </ReactLeaflet.Marker>
-            ))}
+            {data.map((metric: Metric) => {
+                console.log(metric);
+                return (
+
+                    <Marker position={[metric.lat, metric.lng]} key={metric.id}>
+                        <Tooltip>
+                            {metric.temperature}°C, {metric.humidity}%
+                        </Tooltip>
+                    </Marker>
+                );
+            })}
         </MapContainer>
     )
 }
