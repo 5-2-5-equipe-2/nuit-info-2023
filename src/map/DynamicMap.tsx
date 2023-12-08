@@ -7,7 +7,6 @@ import 'leaflet/dist/leaflet.css';
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
 
 
-
 import {Metric} from '@prisma/client';
 import {Marker} from "react-leaflet";
 
