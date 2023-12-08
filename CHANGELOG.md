@@ -1,3 +1,10 @@
+## [1.22.1](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.22.0...v1.22.1) (2023-12-08)
+
+
+### Bug Fixes
+
+* missing secrets ([526d8f0](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/526d8f0f321342e9676c2d49f7620fb05188f3bd))
+
 # [1.22.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.21.0...v1.22.0) (2023-12-08)
 
 
