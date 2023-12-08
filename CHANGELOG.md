@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.22.2...v1.23.0) (2023-12-08)
+
+
+### Features
+
+* fix thinks ([084bfe2](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/084bfe285ac7a01b3e47a63f5b19d5f0b9006ac8))
+
 ## [1.22.2](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.22.1...v1.22.2) (2023-12-08)
 
 
