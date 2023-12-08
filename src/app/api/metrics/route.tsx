@@ -36,6 +36,8 @@ export async function POST(request: Request) {
             temperature: metric.temperature,
             humidity: metric.humidity,
             day: metric.day,
+            lat: metric.lat,
+            lng: metric.lng,
         }
     })
 
