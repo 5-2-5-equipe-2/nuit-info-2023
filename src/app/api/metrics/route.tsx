@@ -18,6 +18,8 @@ const metricObject = z.object({
     temperature: z.number(),
     humidity: z.number(),
     day: z.boolean(),
+    lat: z.number(),
+    lng: z.number(),
 });
 
 export async function POST(request: Request) {
@@ -34,6 +36,8 @@ export async function POST(request: Request) {
             temperature: metric.temperature,
             humidity: metric.humidity,
             day: metric.day,
+            lat: metric.lat,
+            lng: metric.lng,
         }
     })
 

@@ -28,13 +28,13 @@ export async function POST(request: Request) {
     const body = await request.json()
 
 
-    const device = deviceObject.parse(body)
+    const deviceParsed = deviceObject.parse(body)
 
     // save to db
-    await prisma.device.create({
+    const device = await prisma.device.create({
         data: {
-            type: device.type,
-            name: device.name,
+            type: deviceParsed.type,
+            name: deviceParsed.name,
         }
     })
 
