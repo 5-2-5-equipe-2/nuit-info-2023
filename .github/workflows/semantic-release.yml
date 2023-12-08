@@ -19,12 +19,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 21
-      - name: Install dependencies
-        run: npm install
-      - name: Build app
-        run: |
-          npx prisma generate
-          npm run build
       - name: Semantic release
         uses: cycjimmy/semantic-release-action@v4
         id: semantic
