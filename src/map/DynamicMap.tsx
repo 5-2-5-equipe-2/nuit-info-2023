@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import Leaflet from 'leaflet';
 import * as ReactLeaflet from 'react-leaflet';
+import 'leaflet-defaulticon-compatibility';
 import 'leaflet/dist/leaflet.css';
 
 
@@ -11,10 +12,10 @@ const Map = () => {
 
     return (
         <MapContainer
-            style={{ height: "100%", width: "100%" }}
+            // important to set this to some height otherwise the map won't be visible
+            style={{ minHeight: "500px" }}
             center={[51.505, -0.09]}
             zoom={13}
-            scrollWheelZoom={false}
         >
             <ReactLeaflet.TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
