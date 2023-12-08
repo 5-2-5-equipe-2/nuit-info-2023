@@ -13,9 +13,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" data-theme="light">
-        <body>
+        <body className={"h-screen"}>
         <NavBar/>
-        <main className={"md:container md:mx-auto"}>
+        <main className={"md:container md:mx-auto min-h-full"}>
            {children}
         </main>
         </body>
