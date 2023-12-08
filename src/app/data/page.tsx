@@ -2,6 +2,7 @@ import React from 'react'
 import prisma from "@/lib/prisma";
 import Quiz from "@/app/components/quiz/Quiz";
 
+export const dynamic = 'force-dynamic';
 export default async function Page() {
     // verify id is a int
     let devices = await prisma.device.findMany(
