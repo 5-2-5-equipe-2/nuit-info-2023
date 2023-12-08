@@ -42,23 +42,31 @@ export default async function NavBar() {
                 </ul>
             </div>
             <div className="dropdown dropdown-end">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
+                {session?.user ? (
+                    <Fragment>
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
                         <span className="text-3xl">
                             {session?.user?.image ? <img src={session.user.image} alt=""/> : session?.user?.name}
                         </span>
-                    </div>
-                </label>
-                <ul tabIndex={0}
-                    className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li>
-                        <div className="flex flex-col">
-                            <span className="text-xl">{session?.user?.name}</span>
-                            <span className="text-sm">{session?.user?.email}</span>
-                        </div>
-                    </li>
-                    <li><Link href={"/api/auth/signout"}>Logout</Link></li>
-                </ul>
+                            </div>
+                        </label>
+                        <ul tabIndex={0}
+                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li>
+                                <div className="flex flex-col">
+                                    <span className="text-xl">{session?.user?.name}</span>
+                                    <span className="text-sm">{session?.user?.email}</span>
+                                </div>
+                            </li>
+                            <li><Link href={"/api/auth/signout"}>Logout</Link></li>
+                        </ul>
+                    </Fragment>
+                ) : (
+                    <Link href={"/api/auth/signin"}
+                    className={"btn btn-primary"}
+                    >Login</Link>
+                )}
             </div>
         </div>
     )
