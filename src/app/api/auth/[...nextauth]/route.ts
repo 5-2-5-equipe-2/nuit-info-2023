@@ -14,7 +14,7 @@ const MyAdapter: Adapter = {
         return prismaAdapter.linkAccount(account);
     },
 };
-const handler = NextAuth({
+export const nextAuthOptions = {
     providers: [
         Keycloak({
             clientId: process.env.KEYCLOAK_CLIENT_ID ?? "",
@@ -23,7 +23,10 @@ const handler = NextAuth({
         }),
     ],
     secret: process.env.SECRET ?? "pewpewpew",
-    adapter: MyAdapter
-})
+    // adapter: MyAdapter
+};
+const handler = NextAuth(
+    nextAuthOptions
+)
 
 export {handler as GET, handler as POST}
