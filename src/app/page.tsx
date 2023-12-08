@@ -1,7 +1,26 @@
-export default function Home() {
+import prisma from "@/lib/prisma";
+
+export default async function Home() {
+    const deviceCount = await prisma.device.count()
+    const metricCount = await prisma.metric.count()
+    const userCount = await prisma.user.count()
+    const quizCount = await prisma.quiz.count()
+    const questionCount = await prisma.question.count()
+
+    // metrics per second
+    const mps = await prisma.metric.count({
+        where: {
+            createdAt: {
+                gt: new Date(new Date().getTime() - 1000)
+            }
+        }
+    })
+
     return (
         <>
-            <div className="hero h-max" style={{backgroundImage: "url(/nasa-vhSz50AaFAs-unsplash.jpg)"}}>
+            <div className="hero" style={{backgroundImage: "url(/nasa-vhSz50AaFAs-unsplash.jpg)",
+                height: "80vh",
+            }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content flex-col">
                     <div className="max-w-md">
@@ -10,9 +29,8 @@ export default function Home() {
                         <button className="btn btn-primary m-5">Learn</button>
                         <button className={"btn btn-info m-5"}>Contribute</button>
                     </div>
-                    <div className={"flex w-full m-0 justify-between"}>
-                        <div className="stats shadow mr-5">
-
+                    <div className={"flex flex-row mx-auto flex-wrap justify-center justify-items-center "}>
+                        <div className="stats shadow m-5">
                             <div className="stat">
                                 <div className="stat-figure text-secondary">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
@@ -23,8 +41,8 @@ export default function Home() {
                                     </svg>
                                 </div>
                                 <div className="stat-title">Devices</div>
-                                <div className="stat-value">31K</div>
-                                <div className="stat-desc">Shared between XX users</div>
+                                <div className="stat-value">{deviceCount}</div>
+                                <div className="stat-desc">Shared between {userCount} users</div>
                             </div>
 
                             <div className="stat">
@@ -37,13 +55,13 @@ export default function Home() {
                                     </svg>
                                 </div>
                                 <div className="stat-title">Data Points</div>
-                                <div className="stat-value">4,200</div>
-                                <div className="stat-desc">XXX data points per second</div>
+                                <div className="stat-value">{metricCount}</div>
+                                <div className="stat-desc">{mps} data points per second</div>
                             </div>
 
                         </div>
 
-                        <div className="stats shadow">
+                        <div className="stats shadow m-5">
 
                             <div className="stat">
                                 <div className="stat-figure text-secondary">
@@ -55,7 +73,7 @@ export default function Home() {
                                     </svg>
                                 </div>
                                 <div className="stat-title">Quizz</div>
-                                <div className="stat-value">31K</div>
+                                <div className="stat-value">{quizCount}</div>
                             </div>
 
                             <div className="stat">
@@ -68,8 +86,8 @@ export default function Home() {
                                     </svg>
                                 </div>
                                 <div className="stat-title">Questions</div>
-                                <div className="stat-value">4,200</div>
-                                <div className="stat-desc">XXX data points per second</div>
+                                <div className="stat-value">{questionCount}</div>
+                                <div className="stat-desc">in {quizCount} quizz</div>
                             </div>
                         </div>
 
