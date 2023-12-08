@@ -94,4 +94,6 @@ model Metric {
   humidity    Float
   temperature Float
   day         Boolean
+  lat         Float
+  lng         Float
 }
