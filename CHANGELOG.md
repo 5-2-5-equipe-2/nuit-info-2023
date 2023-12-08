@@ -1,3 +1,11 @@
+## [1.22.2](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.22.1...v1.22.2) (2023-12-08)
+
+
+### Bug Fixes
+
+* favicon buttons ([d414b76](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/d414b76a3357bb45bfe915a2a0d6002748e0caf5))
+* reduce image size ([5748844](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/574884422f3e96b1ab45fbed1e028c95a514a4e7))
+
 ## [1.22.1](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.22.0...v1.22.1) (2023-12-08)
 
 
