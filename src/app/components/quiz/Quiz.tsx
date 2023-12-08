@@ -62,7 +62,6 @@ export default function Quiz(props: any) {
 
     return (
         <>
-
             <div className={"flex justify-center h-full items-center mt-10"}>
                 <div className={"w-3/4 card bg-secondary-content shadow-xl p-8"}>
                     <h1 className={"text-4xl mb-5 m-5"}>{quiz.questions[currentQuestion].title}</h1>
