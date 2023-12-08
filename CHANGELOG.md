@@ -1,3 +1,18 @@
+# [1.20.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.19.0...v1.20.0) (2023-12-08)
+
+
+### Bug Fixes
+
+* device json response ([bd3d7cc](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/bd3d7ccf04ee1b91e9181b42624dfffd655c43d6))
+* device json response ([9a9afef](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/9a9afeff32ee5538dac6b56f49a71449e0517977))
+* missing dynamic ([c41c037](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/c41c03795e7c4fe50c3d045ea1aa5cf70727115f))
+
+
+### Features
+
+* lat lng ([3da1cad](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/3da1cad899466ac61af07c9fcced94bd3d85a007))
+* lat lng ([1e9460c](https://github.com/5-2-5-equipe-2/nuit-info-2023/commit/1e9460caec8728efea255ddbe817b1eff8270156))
+
 # [1.19.0](https://github.com/5-2-5-equipe-2/nuit-info-2023/compare/v1.18.0...v1.19.0) (2023-12-07)
 
 
