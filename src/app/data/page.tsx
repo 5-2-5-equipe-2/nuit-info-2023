@@ -10,10 +10,18 @@ export default async function Page() {
     const metrics = await prisma.metric.findMany({})
     const devices = await prisma.device.findMany({})
     return <>
-        <Map
-            data={metrics}
-        />
-        <MetricTable data={metrics}/>
-        <DeviceTable data={devices}/>
+        <div className={"w-3/4 mx-auto"}>
+            <div className={"flex h-96 mb-5"}>
+                <Map
+                    data={metrics}
+                />
+            </div>
+            <div className={"flex"}>
+                <DeviceTable data={devices}/>
+            </div>
+            <div className={"flex"}>
+                <MetricTable data={metrics}/>
+            </div>
+        </div>
     </>
 }
